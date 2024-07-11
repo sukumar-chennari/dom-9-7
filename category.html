@@ -430,9 +430,13 @@
                 title.innerText=jewel[i].title
                 card.appendChild(title)
       
-                /*var des=document.createElement('p')
+                var des=document.createElement('p')
                 des.innerText=jewel[i].description
-                card.appendChild(des)*/
+                des.style.display='-webkit-box'
+                des.style.webkitLineClamp= '2';
+                des.style.webkitBoxOrient='vertical';
+                des.style.overflow='hidden'
+                card.appendChild(des)
       
                 var div1=document.createElement('div')
                 div1.setAttribute('id','div1')
