@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inputs</title>
+</head>
+<body>
+    <!-- take user inputs using prompts and display it and on click of the button 
+     reload the page and delete data   -->
+
+    <script>
+        var btn=document.getElementsByTagName('button')
+       
+        
+        var a=[]
+        for(i=0;i<4;i++){
+            let input=prompt('Enter the value ',(i+1),': ')
+            a.push(input)
+            localStorage.setItem('val'+(i+1),input)
+        }
+        
+       
+
+        btn[0].addEventListener('click', ()=>{
+            localStorage.clear()
+            window.location.reload()
+            alert('!!!Succefully cleared all data from local storage!!!')
+        })
+    </script>
+
+</body>
+</html>
